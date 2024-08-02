@@ -2,8 +2,9 @@ pipeline {
     agent any
 	
     environment {
-        GOOGLE_APPLICATION_CREDENTIALS = credentials('gcp-key')
-	GIT_TOKEN = credentials('git-token')
+        AWS_ACCESS_KEY_ID = credentials('aws-credentials')
+        AWS_SECRET_KEY_ID = credentials('aws-credentials')
+        AWS_DEFAULT_REGION = 'us-east-1'
     }
 	
     stages {
